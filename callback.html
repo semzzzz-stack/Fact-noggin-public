@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fact Noggin Poster: connected</title>
+<link rel="icon" href="avatar.png">
+<style>
+:root{--bg:#f6f7fb;--fg:#1a2233;--muted:#5a6478;--line:#d9deea;--accent:#0f2a44;--mark:#FFD60A;
+--display:"Archivo",system-ui,sans-serif;--body:"Source Serif 4",Georgia,serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0d1624;--fg:#e6eaf2;--muted:#9aa5ba;--line:#24324a;--accent:#FFD60A;--mark:#FFD60A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1624;--fg:#e6eaf2;--muted:#9aa5ba;--line:#24324a;--accent:#FFD60A;--mark:#FFD60A;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:17px/1.65 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+main{max-width:66ch;margin:0 auto}
+header{border-bottom:3px solid var(--mark);padding-bottom:16px;margin-bottom:24px}
+.brand{font:700 13px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(28px,6vw,40px)/1.15 var(--display);color:var(--accent);margin:10px 0 6px;text-wrap:balance}
+h2{font:700 19px/1.3 var(--display);margin:28px 0 6px}
+.meta{color:var(--muted);font-size:15px;margin:0}
+code{font-size:.9em;background:var(--line);padding:1px 5px;border-radius:4px}
+li{margin:8px 0} a{color:var(--accent)}
+footer{margin-top:40px;color:var(--muted);font-size:15px;border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head><body>
+<main>
+<header><div class="brand">Fact Noggin Poster</div><h1 id="h">TikTok connection</h1></header>
+<p id="msg">Reading the answer from TikTok…</p>
+<p>Copy the whole address of this page from the address bar and paste it into the <strong>connect</strong> run of the TikTok posting workflow on GitHub (field <em>value</em>). The code works once and expires after a few minutes.</p>
+<script>
+const q = new URLSearchParams(location.search);
+const m = document.getElementById("msg");
+if (q.get("code")) m.textContent = "TikTok sent a connection code. Copy this page's address now.";
+else if (q.get("error")) m.textContent = "TikTok refused the connection: " + (q.get("error_description") || q.get("error"));
+else m.textContent = "No code in this address. Open the connection link from the workflow first.";
+</script>
+</main>
+</body></html>

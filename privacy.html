@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fact Noggin Poster Privacy</title>
+<link rel="icon" href="avatar.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Source+Serif+4:wght@400;600&display=swap">
+<style>
+:root{--bg:#f6f7fb;--fg:#1a2233;--muted:#5a6478;--line:#d9deea;--accent:#0f2a44;--mark:#FFD60A;
+--display:"Archivo",system-ui,sans-serif;--body:"Source Serif 4",Georgia,serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0d1624;--fg:#e6eaf2;--muted:#9aa5ba;--line:#24324a;--accent:#FFD60A;--mark:#FFD60A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1624;--fg:#e6eaf2;--muted:#9aa5ba;--line:#24324a;--accent:#FFD60A;--mark:#FFD60A;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:17px/1.65 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+main{max-width:66ch;margin:0 auto}
+header{border-bottom:3px solid var(--mark);padding-bottom:16px;margin-bottom:24px}
+.brand{font:700 13px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(28px,6vw,40px)/1.15 var(--display);color:var(--accent);margin:10px 0 6px;text-wrap:balance}
+h2{font:700 19px/1.3 var(--display);margin:28px 0 6px}
+.meta{color:var(--muted);font-size:15px;margin:0}
+code{font-size:.9em;background:var(--line);padding:1px 5px;border-radius:4px}
+li{margin:8px 0} a{color:var(--accent)}
+footer{margin-top:40px;color:var(--muted);font-size:15px;border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head><body>
+<main>
+<header><div class="brand"><a href="./">Fact Noggin</a></div><h1>Privacy Policy</h1></header>
+<p class="meta">Last updated: November 1, 2026</p>
+<p>Fact Noggin Poster (&quot;the app&quot;) posts Fact Noggin&#x27;s own videos to the Fact Noggin TikTok account. It is used only by the owner of that account (contact: factsnoggin@gmail.com).</p>
+<h2>What data the app receives from TikTok</h2>
+<ul>
+<li>An access token and refresh token, so it can post videos to the connected account.</li>
+<li>The account&#x27;s open ID, nickname and posting settings (allowed privacy levels, maximum video length), read with the <code>user.info.basic</code> and Content Posting API scopes so each post respects them.</li>
+</ul>
+<h2>What the app does not collect</h2>
+<ul>
+<li>No data from any other TikTok user, no followers, messages, contacts, location, or analytics.</li>
+<li>No cookies or tracking; the app has no public website or user interface.</li>
+</ul>
+<h2>How data is stored and used</h2>
+<ul>
+<li>Tokens are used only to upload and publish the account owner&#x27;s videos.</li>
+<li>The refresh token is stored encrypted (AES-256) in the operator&#x27;s private GitHub repository and is never shared, sold or used for advertising.</li>
+<li>A log of posted videos (episode name, TikTok publish ID, status and time) is kept in the same private repository.</li>
+</ul>
+<h2>Deleting data</h2>
+<p>Disconnect the app in TikTok (Settings and privacy → Security and permissions → Apps and services), or email factsnoggin@gmail.com; stored tokens are deleted within 7 days.</p>
+<p><strong>Contact:</strong> factsnoggin@gmail.com</p>
+<footer>Fact Noggin · factsnoggin@gmail.com</footer>
+</main>
+</body></html>
